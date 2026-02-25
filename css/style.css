@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: space-between; /* left - center - right */
     align-items: center;
-    padding: 8cqw 60px;
+    padding: 8px 60px;
     background: #0f172a;
 }
 
