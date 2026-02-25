@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -8,13 +14,63 @@ body {
     min-height: 100vh;
 }
 
-header {
-    background-color: rgba(0, 0, 0, 0.6);
+/* Navbar Layout */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* left - center - right */
+    align-items: center;
+    padding: 8cqw 60px;
+    background: #0f172a;
+}
+
+/* Left */
+.logo {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Center */
+.nav-center {
+    display: flex;
+    list-style: none;
+    gap: 40px; /* spacing using flexbox */
+}
+
+.nav-center a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+/* Link Hover */
+.nav-center a:hover {
+    color: #38bdf8;
+}
+
+/* Active Link */
+.nav-center .active {
+    color: #ffffff;
+    border-bottom: 2px solid #38bdf8;
+    padding-bottom: 4px;
+}
+
+/* Right Button (Reuse .btn-primary from Day 2) */
+.btn-primary {
+    background-color: #38bdf8;
     color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 28px;
-    letter-spacing: 2px;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0ea5e9;
 }
 
 .main-container {
