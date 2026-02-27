@@ -12,23 +12,40 @@
 </head>
 <body>
 
-    <header class="navbar">
-  <div class="logo">LOGO</div>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">LOGO</div>
 
-  <nav class="nav-menu">
-    <a href="#">Home</a>
-    <a href="#">Project</a>
-    <a href="#">Contact</a>
-    <button class="cta-btn">Sign Up</button>
-  </nav>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Project</a></li>
+        <li><a href="#">Contact</a></li>
 
-  <div class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</header>
+        <!-- Search Box -->
+        <li>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button onclick="showPopup()">Search</button>
+            </div>
+        </li>
+    </ul>
 
+<!-- Hamburger -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+    <h2>Thank You 😊</h2>
+    <p>Your search has been submitted!</p>
+    <button onclick="closePopup()">Close</button>
+</div>
+
+<!-- Main Content -->
     <div class="main-container">
         <div class="content-box">
             <h2>Welcome to My First Day 🚀</h2>
@@ -45,6 +62,7 @@
 
     <div class="container">
 
+<!-- Button Component -->
 <h2>Button Component System</h2>
 
 <div class="row">
