@@ -1,21 +1,18 @@
 console.log("Day 1 Task Loaded");
 
-/* Hamburger */
-const navbar = document.querySelector(".navbar");
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelectorAll(".nav-menu a");
-const body = document.body;
+//Hamburger 
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("active");
+}
 
-/* Toggle Menu */
-hamburger.addEventListener("click", () => {
-  navbar.classList.toggle("nav-open");
-  body.classList.toggle("no-scroll");
-});
+//Searching Bar
+function showPopup(){
+    let input = document.getElementById("searchInput").value;
+    if(input.trim() !== ""){
+        document.getElementById("popup").style.display="block";
+    }
+}
 
-/* Auto Close on Link Click */
-navLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    navbar.classList.remove("nav-open");
-    body.classList.remove("no-scroll");
-  });
-});
+function closePopup(){
+    document.getElementById("popup").style.display="none";
+}
