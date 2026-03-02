@@ -102,6 +102,55 @@ nav{
     color:#444;
 }
 
+/* ================= CARD SECTION ================= */
+.cards-section{
+    padding:60px 8%;
+    background:#eef2f7;
+}
+
+.cards-section h2{
+   
+    margin-bottom:40px;
+}
+
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+}
+
+.card-content p{
+    font-size:14px;
+    color:#555;
+    margin-bottom:15px;
+}
+
 /* ================= BUTTON COMPONENT SECTION ================= */
 .buttons-section{
     padding:60px 8%;
