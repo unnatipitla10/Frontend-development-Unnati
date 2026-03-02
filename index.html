@@ -13,25 +13,22 @@
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar">
+<!-- NAVBAR -->
+<nav>
     <div class="logo">LOGO</div>
 
-    <ul class="nav-links" id="navLinks">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Project</a></li>
-        <li><a href="#">Contact</a></li>
+    <div class="nav-links" id="navLinks">
+        <a href="#">Home</a>
+        <a href="#">Project</a>
+        <a href="#">Internship</a>
+        <a href="#">Contact</a>
 
-        <!-- Search Box -->
-        <li>
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Search...">
-                <button onclick="showPopup()">Search</button>
-            </div>
-        </li>
-    </ul>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="openPopup()">Search</button>
+        </div>
+    </div>
 
-<!-- Hamburger -->
     <div class="hamburger" onclick="toggleMenu()">
         <span></span>
         <span></span>
@@ -39,60 +36,47 @@
     </div>
 </nav>
 
-<!-- Popup -->
-<div class="popup" id="popup">
-    <h2>Thank You 😊</h2>
-    <p>Your search has been submitted!</p>
-    <button onclick="closePopup()">Close</button>
-</div>
+<!-- HERO -->
+<section class="hero">
+    <h1>Front-End Developer Internship</h1>
+    <p>Learning, building and improving frontend skills every day 🚀</p>
+    <p>Setup & Deployment(Completed)</p>
+</section>
 
-<!-- Main Content -->
-    <div class="main-container">
-        <div class="content-box">
-            <h2>Welcome to My First Day 🚀</h2>
-            <p>
-                Today is my first day of internship as a Frontend Developer. 
-                I am excited to start my journey in web development. 
-                I will be learning HTML, CSS, and JavaScript to build 
-                beautiful and responsive websites. 
-                This is just the beginning of my professional career, 
-                and I am ready to learn and grow every day!
-            </p>
-        </div>
+<!-- BUTTON SECTION -->
+<section class="buttons-section">
+    <h2>Button Component System</h2>
+
+    <div class="button-row">
+        <div class="label">Primary Buttons</div>
+        <button class="btn btn-primary">Default</button>
+        <button class="btn btn-primary">Hover</button>
+        <button class="btn btn-primary">Active</button>
+        <button class="btn btn-primary" disabled>Disabled</button>
     </div>
 
- <!-- Button Component -->   
-<div class="container">
-<h2>Button Component System</h2>
+    <div class="button-row">
+        <div class="label">Secondary Buttons</div>
+        <button class="btn btn-outline">Default</button>
+        <button class="btn btn-outline">Hover</button>
+        <button class="btn btn-outline">Active</button>
+        <button class="btn btn-outline" disabled>Disabled</button>
+    </div>
+</section>
 
-<div class="row">
-    <div class="label">Primary Buttons</div>
-    <div>
-        <button class="btn primary">Default</button>
-        <button class="btn primary">Hover</button> <br><br>
-        <button class="btn primary">Active</button>
-        <button class="btn primary" disabled>Disabled</button>
+<!-- FOOTER -->
+<footer>
+    © 2026 | Made with ❤️ by Unnati Pitla
+</footer>
+
+<!-- POPUP -->
+<div class="modal" id="popup">
+    <div class="modal-content">
+        <h3>✨ Cute Search Message ✨</h3>
+        <p id="popupText"></p>
+        <button onclick="closePopup()">Close</button>
     </div>
 </div>
-
-    <br>
-    
-<div class="row">
-    <div class="label">Secondary Buttons </div>
-    <div>
-        <button class="btn secondary">Default</button>
-        <button class="btn secondary">Hover</button> <br><br>
-        <button class="btn secondary">Active</button>
-        <button class="btn secondary" disabled>Disabled</button>
-    </div>
-</div>
-
-</div> 
-
-<!-- Footer -->
-    <footer>
-        © 2026 | Designed with ❤️ for My Internship Journey
-    </footer>
 
     <script src="js/script.js"></script>
 
