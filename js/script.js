@@ -6,13 +6,17 @@ function toggleMenu(){
 }
 
 //Searching Bar
-function showPopup(){
-    let input = document.getElementById("searchInput").value;
-    if(input.trim() !== ""){
-        document.getElementById("popup").style.display="block";
+function openPopup(){
+    let value = document.getElementById("searchInput").value;
+    if(value.trim()===""){
+        document.getElementById("popupText").innerText="Please type something cutie 😊";
+    } else {
+        document.getElementById("popupText").innerText="You searched for: " + value + "❤️";
     }
+    document.getElementById("popup").style.display="flex";
 }
 
 function closePopup(){
     document.getElementById("popup").style.display="none";
 }
+
