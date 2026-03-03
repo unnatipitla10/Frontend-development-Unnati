@@ -20,3 +20,31 @@ function closePopup(){
     document.getElementById("popup").style.display="none";
 }
 
+//Notification Banner
+function createNotification(message, type) {
+  const container = document.getElementById("notificationContainer");
+
+  const notification = document.createElement("div");
+  notification.classList.add("notification", type);
+
+  notification.innerHTML = `
+    <span>${message}</span>
+    <span class="close-btn" onclick="this.parentElement.remove()">×</span>
+  `;
+
+  container.appendChild(notification);
+
+  // Auto remove after 3 seconds
+  setTimeout(() => {
+    notification.remove();
+  }, 3000);
+}
+
+function showSuccess() {
+  createNotification("Success: Project saved!", "success");
+}
+
+function showError() {
+  createNotification("Error: Failed to fetch data.", "error");
+}
+
