@@ -44,13 +44,24 @@
 </section> <br><br>
 
 <!-- Notification Banner -->
-<section class="center"> 
-    <h2>Notification Playground</h2>
-    <button class="btns success-btn" onclick="showNotification('success')">Trigger Success</button>
-    <button class="btns error-btn" onclick="showNotification('error')">Trigger Error</button>
+<section class="notification-section">
+    <div class="notification-box">
+        <h2>Notification Playground</h2>
 
-    <div class="notification-container" id="notificationContainer"></div>
+        <div class="notification-buttons">
+            <button class="btns success-btn" id="successBtn">
+                Trigger Success
+            </button>
+
+            <button class="btns error-btn" id="errorBtn">
+                Trigger Error
+            </button>
+        </div>
+    </div>
 </section>
+
+<!-- Notification Container -->
+<div class="notification-container" id="notificationContainer"></div>
 
 <!-- CARD SECTION -->
 <section class="cards-section">
