@@ -102,6 +102,77 @@ nav{
     color:#444;
 }
 
+/* Buttons */
+button {
+  padding: 10px 18px;
+  margin: 10px 10px 0 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+button:first-of-type {
+  background-color: #28a745;
+}
+
+button:last-of-type {
+  background-color: #dc3545;
+}
+
+/* Notification container */
+.notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+/* Notification box */
+.notification {
+  min-width: 280px;
+  max-width: 400px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideIn 0.4s ease;
+}
+
+/* Types */
+.success {
+  background-color: #28a745;
+}
+
+.error {
+  background-color: #dc3545;
+}
+
+/* Close button */
+.close-btn {
+  margin-left: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 /* ================= CARD SECTION ================= */
 .cards-section{
     padding:60px 8%;
@@ -319,4 +390,16 @@ footer{
      .card-container{
         grid-template-columns:1fr;
     }
+
+    .notification-container {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+  }
+
+  .notification {
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+  }
 }
