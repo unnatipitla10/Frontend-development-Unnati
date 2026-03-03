@@ -102,37 +102,71 @@ nav{
     color:#444;
 }
 
+/* === Notification Banner === */
+.notification-section{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding:60px 20px;
+}
+
+.notification-box{
+    width:100%;
+    max-width:600px;
+    background:#ffffff;
+    padding:30px 20px;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.notification-box h2{
+    margin-bottom:30px;
+}
+
 /* Buttons */
-.center{
-  justify-content: center;
-  text-align: center;
+.notification-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
 .btns{
-    padding:10px 18px;
+    padding:12px 24px;
     border:none;
-    border-radius:6px;
+    border-radius:8px;
     cursor:pointer;
-    color:#fff;
     font-weight:600;
-    margin-right:10px;
+    color:#fff;
+    transition:0.3s;
+    min-width:160px;
 }
 
-.success-btn{ background:#28a745; }
-.error-btn{ background:#dc3545; }
+.success-btn{
+    background:linear-gradient(135deg,#28a745,#43d477);
+}
 
-/* Notification Container */
+.error-btn{
+    background:linear-gradient(135deg,#dc3545,#ff6b6b);
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Notification Toast */
 .notification-container{
     position:fixed;
     top:20px;
     right:20px;
-    z-index:1000;
     display:flex;
     flex-direction:column;
     gap:12px;
+    z-index:1000;
 }
 
-/* Notification Box */
 .notification{
     min-width:280px;
     max-width:350px;
@@ -144,10 +178,8 @@ nav{
     align-items:center;
     box-shadow:0 8px 20px rgba(0,0,0,0.15);
     animation:slideIn 0.4s ease forwards;
-    position:relative;
 }
 
-/* Success & Error */
 .notification.success{
     background:linear-gradient(135deg,#28a745,#43d477);
 }
@@ -156,7 +188,6 @@ nav{
     background:linear-gradient(135deg,#dc3545,#ff6b6b);
 }
 
-/* Close Button */
 .close-btn{
     background:none;
     border:none;
@@ -395,13 +426,30 @@ footer{
         grid-template-columns:1fr;
     }
 
-     .notification-container{
+     .notification-section{
+        padding:40px 15px;
+    }
+
+    .notification-box{
+        padding:30px 20px;
+    }
+
+    .notification-buttons{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .btns{
+        width:100%;
+    }
+
+    .notification-container{
         right:10px;
         left:10px;
         top:15px;
     }
 
-     .notification{
+    .notification{
         min-width:100%;
         max-width:100%;
     }
