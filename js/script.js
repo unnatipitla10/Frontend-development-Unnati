@@ -21,28 +21,40 @@ function closePopup(){
 }
 
 //Notification Banner 
-function showNotification(type){
-    const container = document.getElementById("notificationContainer");
+const successBtn = document.getElementById("successBtn");
+const errorBtn = document.getElementById("errorBtn");
+const container = document.getElementById("notificationContainer");
+
+successBtn.addEventListener("click", () => {
+    showNotification("success", "Success: Project saved!");
+});
+
+errorBtn.addEventListener("click", () => {
+    showNotification("error", "Error: Failed to fetch data.");
+});
+
+function showNotification(type, message){
 
     const notification = document.createElement("div");
     notification.classList.add("notification", type);
 
     notification.innerHTML = `
-        <span>${type === "success" ? "✅ Success: Project saved!" : "⚠ Error: Failed to fetch data."}</span>
+        <span>${message}</span>
         <button class="close-btn">&times;</button>
     `;
 
     container.appendChild(notification);
 
-    // Auto remove after 5 seconds
-    setTimeout(()=>{
+    // Auto remove after 5 sec
+    setTimeout(() => {
         notification.remove();
-    },5000);
+    }, 5000);
 
     // Manual close
-    notification.querySelector(".close-btn").addEventListener("click",()=>{
-        notification.remove();
-    });
+    notification.querySelector(".close-btn")
+        .addEventListener("click", () => {
+            notification.remove();
+        });
 }
 
 
