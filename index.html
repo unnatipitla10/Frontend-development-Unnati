@@ -63,6 +63,36 @@
 <!-- Notification Container -->
 <div class="notification-container" id="notificationContainer"></div>
 
+<!-- Contact me Form -->
+      <div class="container">
+    <form id="contactForm" novalidate>
+      <h2>Contact Me</h2>
+
+      <!-- Name -->
+      <div class="form-group">
+        <label>Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        <small class="error" id="nameError"></small>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="unnatipitla1026@gmail.com">
+        <small class="error" id="emailError"></small>
+      </div>
+
+      <!-- Message -->
+      <div class="form-group">
+        <label>Message:</label>
+        <textarea id="message" rows="4" placeholder="Write your message..."></textarea>
+        <small class="error" id="messageError"></small>
+      </div>
+
+      <button type="submit" id="submitBtn" disabled>Send Message</button>
+    </form>
+  </div>
+
 <!-- CARD SECTION -->
 <section class="cards-section">
     <h2>Our Learning Modules</h2>
