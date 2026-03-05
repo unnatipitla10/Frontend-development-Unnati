@@ -57,7 +57,7 @@ function showNotification(type, message){
         });
 }
 
-//Contact me form
+//Contact Me Form
 const form = document.getElementById("contactForm");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
