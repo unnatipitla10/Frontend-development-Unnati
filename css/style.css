@@ -480,6 +480,27 @@ font-size:13px;
 color:#ccc;
 }
 
+/* Go-to-top button */
+#topBtn{
+position: fixed;
+bottom: 30px;
+right: 30px;
+height: 55px;
+width: 55px;
+border: none;
+border-radius: 50%;
+background: #3b6db3;
+color: white;
+font-size: 22px;
+cursor: pointer;
+box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+display: none;
+}
+
+#topBtn:hover{
+background: #2c5691;
+}
+
 /* ================= POPUP MODAL ================= */
 .modal{
     display:none;
