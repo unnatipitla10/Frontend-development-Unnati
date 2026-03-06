@@ -130,4 +130,22 @@ form.addEventListener("submit", function(e) {
   submitBtn.disabled = true;
 });
 
+// Go-to-top button
+let btn = document.getElementById("topBtn");
+
+window.onscroll = function() {
+if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+btn.style.display = "block";
+} else {
+btn.style.display = "none";
+}
+};
+
+function goTop(){
+window.scrollTo({
+top: 0,
+behavior: "smooth"
+});
+}
+
 
