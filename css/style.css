@@ -257,7 +257,11 @@ nav{
     margin-bottom:15px;
 }
 
+/* Contact Me Form */
 .containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 450px;
   padding: 15px;
