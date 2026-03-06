@@ -58,7 +58,7 @@ border-radius:5px;
 border:1px solid #ccc;
 }
 
-.search-box button{
+.search-box .search{
 padding:5px 15px;
 font-size:12px;
 background:#3a6fb0;
@@ -68,7 +68,7 @@ border-radius:5px;
 cursor:pointer;
 }
 
-.search-box button:hover{
+.search-box .search:hover{
 background:#2f5c94;
 }
 
@@ -98,7 +98,7 @@ width:300px;
 margin-bottom:10px;
 }
 
-.popup-content button{
+.popup-content .close{
 margin-top:10px;
 padding:7px 15px;
 border:none;
